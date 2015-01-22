@@ -25,13 +25,13 @@ print('Connected by openpilot', addr)
 def process1():
     while True:    
         data2 = conn2.recv(1024)
-        print("data from openpilot:", data2)
+#        print("data from openpilot:", data2)
         conn.sendall(data2)
  
 def process2():
     while True:
         data = conn.recv(1024)
-        print("data from esp8266", data)
+#        print("data from esp8266", data)
         conn2.sendall(data)
 
 if __name__ == '__main__':
